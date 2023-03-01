@@ -6,6 +6,7 @@ package Vista;
 
 import DAO.RegistrarDao;
 import Modelo.Usuario;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -71,13 +72,10 @@ public class Registrar extends javax.swing.JFrame {
                             .addComponent(txtNuevaPassword))))
                 .addGap(48, 48, 48))
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(btnNuevoUsuario)))
+                    .addComponent(jLabel2)
+                    .addComponent(btnNuevoUsuario))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -91,9 +89,9 @@ public class Registrar extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(37, 37, 37)
                 .addComponent(txtNuevaPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56)
+                .addGap(47, 47, 47)
                 .addComponent(btnNuevoUsuario)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -122,6 +120,7 @@ public class Registrar extends javax.swing.JFrame {
         RegistrarDao dao = new RegistrarDao();
         
         dao.save(usuario);
+        JOptionPane.showMessageDialog(null,"Se registró al nuevo usuario");
         
     }
     

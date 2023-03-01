@@ -16,9 +16,10 @@ public class Conexion {
 
         try {
             //Aca se ingresa el nombre de tu base de datos
-            String usuario = "miguel"; // el usuario
-            String password = "miguelelmejor"; // tu password
-            String url = "jdbc:mysql://localhost:3306/proyecto_agua?autoReconnect = true & useSSL = false";
+            String usuario = "uzrxabpokg1wyx8o"; // el usuario
+            String password = "jrw0tOvNF3FvXIM6rZdW"; // tu password
+            String dataBase = "bivmcrxb8eaxnpphlalz";
+            String url = "jdbc:mysql://bivmcrxb8eaxnpphlalz-mysql.services.clever-cloud.com:3306/"+ dataBase+"?autoReconnect = true & useSSL = false";
 
             // Establecer el Driver de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
